@@ -18,7 +18,7 @@ export default class Departments extends React.Component {
     .then((res) => res.json())
     .then((resJson) => {
       resJson.map((Department) => {
-        this.state.Departments.push(Department)
+        this.setState({Departments: [...this.state.Departments, Department]});
       })
     })
     .then(() => {
